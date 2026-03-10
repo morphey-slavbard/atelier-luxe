@@ -110,7 +110,7 @@
   }
 
   .editorial-card {
-    @apply bg-card overflow-hidden group cursor-pointer;
+    @apply bg-card overflow-hidden cursor-pointer;
   }
 
   .editorial-card-image {
