@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import heroImage from "@/assets/hero-editorial.jpg";
 import lookbookImage from "@/assets/editorial-lookbook.jpg";
 import rtwImage from "@/assets/editorial-rtw.jpg";
@@ -8,9 +9,18 @@ import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 
 const Index = () => {
+  const [recommendedIndex, setRecommendedIndex] = useState(0);
   const featured = products.slice(0, 4);
   const dresses = products.filter((p) => p.category === "Dresses").slice(0, 3);
   const shoes = products.filter((p) => p.category === "Shoes").slice(0, 3);
+  
+  // Get random recommendations (excluding featured items)
+  const recommendations = products.filter(p => !featured.some(f => f.id === p.id)).slice(0, 12);
+  const currentRecommendation = recommendations[recommendedIndex % recommendations.length];
+  
+  const handleNextRecommendation = () => {
+    setRecommendedIndex((prev) => prev + 1);
+  };
 
   return (
     <main>

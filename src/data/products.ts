@@ -25,7 +25,6 @@ import productShirtDress from "@/assets/product-shirt-dress.jpg";
 import productVelvetDress from "@/assets/product-velvet-dress.jpg";
 import productPleatedDress from "@/assets/product-pleated-dress.jpg";
 import productLaceGown from "@/assets/product-lace-gown.jpg";
-import productVest from "@/assets/product-vest.jpg";
 import productSlingback from "@/assets/product-slingback.jpg";
 import productSneakers from "@/assets/product-sneakers.jpg";
 import productSandals from "@/assets/product-sandals.jpg";
@@ -55,8 +54,12 @@ export interface Product {
   category: string;
   image: string;
   description: string;
+  extendedDescription: string;
   details: string[];
   sizes: string[];
+  sizeFitInfo: string;
+  inStoreAvailability: boolean;
+  deliveryReturns: string;
 }
 
 export const products: Product[] = [
@@ -68,8 +71,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productCoat,
     description: "A masterfully tailored coat in virgin wool with a fluid silhouette. Featuring a notched lapel collar and a single-button closure, this piece embodies understated elegance.",
+    extendedDescription: "This structured wool coat represents the pinnacle of Italian craftsmanship. Cut from the finest virgin wool, it features a fluid silhouette that drapes beautifully over the body. The notched lapel collar and single-button closure create a timeless, sophisticated look that transitions seamlessly from day to evening. The silk lining ensures comfort and luxury, while the meticulous tailoring guarantees a perfect fit that flatters every figure.",
     details: ["100% Virgin Wool", "Silk lining", "Single-button closure", "Made in Italy"],
     sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This coat has a tailored fit that sits close to the body. We recommend sizing up if you prefer a more relaxed silhouette. The model is wearing a size S and measures 5'9\" (175cm).",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "cashmere-overcoat",
@@ -78,8 +85,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productOvercoat,
     description: "An enveloping double-breasted overcoat in luxurious camel cashmere. The elongated silhouette and wide lapels create a commanding yet refined presence.",
+    extendedDescription: "Indulge in the ultimate luxury with this double-breasted overcoat crafted from the finest camel cashmere. The elongated silhouette provides maximum coverage and elegance, while the wide lapels add a touch of drama. Six horn buttons secure the front, and welt pockets offer both style and functionality. This piece is designed to be a wardrobe staple that elevates any outfit with its commanding yet refined presence.",
     details: ["100% Cashmere", "Horn buttons", "Welt pockets", "Made in Italy"],
     sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This overcoat has a relaxed fit with plenty of room for layering. The elongated length hits at mid-calf. Take your regular size for a classic fit.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "tailored-navy-blazer",
@@ -88,8 +99,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productBlazer,
     description: "An impeccably structured single-button blazer in midnight navy wool. The sharp shoulders and nipped waist create a powerful, feminine silhouette.",
+    extendedDescription: "This tailored navy blazer is a testament to precision craftsmanship. Cut from premium virgin wool in a deep midnight navy, it features sharp structured shoulders and a nipped waist that creates a powerful yet feminine silhouette. The single-button closure and flap pockets add to its timeless appeal. Perfect for both professional and social settings, this blazer transitions effortlessly from boardroom to evening events.",
     details: ["100% Virgin Wool", "Viscose lining", "Flap pockets", "Made in Italy"],
     sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This blazer has a tailored fit with structured shoulders. The nipped waist creates a feminine silhouette. We recommend taking your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "belted-trench-coat",
@@ -98,8 +113,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productTrench,
     description: "A timeless belted trench coat in camel gabardine. The midi length and self-tie belt create a polished silhouette that transcends seasons.",
+    extendedDescription: "The belted trench coat is a wardrobe essential that combines functionality with timeless elegance. Crafted from premium cotton gabardine, this camel-colored classic features a midi length that flatters every figure. The self-tie belt cinches the waist for a defined silhouette, while storm flaps and epaulets add authentic trench detailing. This versatile piece transitions seamlessly from city streets to countryside walks.",
     details: ["Cotton gabardine", "Self-tie belt", "Storm flap", "Made in England"],
     sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This trench coat has a classic fit with a self-tie belt for customization. The midi length hits at mid-calf. Take your regular size for a tailored look.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "quilted-puffer-jacket",
@@ -108,8 +127,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productPuffer,
     description: "A modern puffer jacket in matte black nylon with a sculptural silhouette. High-fill goose down ensures exceptional warmth without bulk.",
-    details: ["Nylon shell", "90% Goose down", "Stand collar", "Made in Italy"],
+    extendedDescription: "This contemporary puffer jacket redefines urban outerwear with its sculptural silhouette and premium materials. The matte black nylon shell is filled with high-quality goose down for superior warmth and lightweight comfort. The minimalist design features clean lines and subtle quilting, making it a sophisticated alternative to traditional puffer jackets. Perfect for transitional weather and city exploration.",
+    details: ["Nylon shell", "Goose down filling", "Water-resistant", "Made in Italy"],
     sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This puffer has a relaxed fit with plenty of room for layering. The sculptural silhouette is designed to flatter. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "wool-cape-coat",
@@ -118,8 +141,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productCape,
     description: "A dramatic oversized cape coat in dove grey wool with a cocoon silhouette. The voluminous proportions create an effortlessly striking presence.",
+    extendedDescription: "This dramatic cape coat embodies modern luxury with its oversized cocoon silhouette and premium wool construction. The dove grey color provides versatility, while the voluminous proportions create a striking yet effortless presence. The concealed closure maintains clean lines, and the Italian craftsmanship ensures exceptional quality. Perfect for making a statement while staying comfortable.",
     details: ["Virgin wool blend", "Cocoon silhouette", "Concealed closure", "Made in Italy"],
     sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This cape coat has an oversized cocoon silhouette with plenty of volume. The dramatic proportions are designed to be flattering. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "shearling-jacket",
@@ -128,18 +155,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productShearling,
     description: "A refined aviator jacket in cream leather with plush shearling lining. The asymmetric zip and oversized collar add a contemporary edge.",
+    extendedDescription: "This shearling-lined leather jacket combines rugged luxury with contemporary design. The cream lambskin exterior is lined with plush shearling for unparalleled warmth and comfort. The aviator-inspired silhouette features an asymmetric zip closure and oversized collar, adding a modern edge to this classic style. Exceptional Italian craftsmanship ensures this piece will become a cherished wardrobe staple.",
     details: ["Lambskin leather", "Shearling lining", "Asymmetric zip", "Made in Italy"],
     sizes: ["XS", "S", "M", "L", "XL"],
-  },
-  {
-    id: "wool-vest",
-    name: "Tailored Wool Vest",
-    price: 1600,
-    category: "Outerwear",
-    image: productVest,
-    description: "A sharp tailored vest in beige wool that layers effortlessly over shirts and knits. The minimalist cut offers versatile, modern suiting.",
-    details: ["100% Virgin Wool", "Button closure", "Welt pockets", "Made in Italy"],
-    sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This leather jacket has a relaxed aviator fit. The shearling lining adds slight bulk. Take your regular size for a comfortable fit.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "cashmere-wrap-coat",
@@ -148,8 +169,12 @@ export const products: Product[] = [
     category: "Outerwear",
     image: productCape,
     description: "A luxurious wrap coat in soft grey cashmere with a draped collar. The belted waist and fluid lines create an effortlessly elegant silhouette.",
+    extendedDescription: "Indulge in the ultimate softness with this cashmere wrap coat. The luxurious grey cashmere drapes beautifully over the body, creating fluid lines that flatter every figure. The draped shawl collar and self-tie belt add elegance, while the wrap construction provides versatility in styling. This piece represents the pinnacle of comfort and sophistication.",
     details: ["100% Cashmere", "Self-tie belt", "Shawl collar", "Made in Italy"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This wrap coat has a fluid, draping fit that flatters all body types. The wrap construction allows for adjustability. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
 
   // ── Accessories (9) ──
@@ -160,8 +185,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productBag,
     description: "Crafted from supple calfskin leather, this structured tote features refined hardware and an architectural silhouette that balances form with function.",
+    extendedDescription: "This structured leather tote represents the perfect marriage of form and function. Crafted from the finest supple calfskin, it features an architectural silhouette with clean lines and refined gold-tone hardware. The spacious interior includes an interior zip pocket for organization, while the top handles provide comfortable carrying options. This timeless piece is designed to complement any wardrobe.",
     details: ["Calfskin leather", "Gold-tone hardware", "Interior zip pocket", "Made in Italy"],
     sizes: ["One Size"],
+    sizeFitInfo: "This structured tote measures 30cm x 25cm x 15cm. The top handles have a 20cm drop for comfortable carrying.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "chain-crossbody-bag",
@@ -170,8 +199,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productCrossbody,
     description: "A sleek envelope crossbody in polished calfskin with an elegant gold chain strap. The compact form holds essentials with effortless sophistication.",
+    extendedDescription: "This envelope-style crossbody bag combines elegance with practicality. The polished calfskin exterior features a sleek silhouette, while the elegant gold chain strap adjusts for versatile wear. The magnetic closure ensures security, and the compact interior holds all your essentials. Perfect for day-to-evening transitions, this piece adds a touch of luxury to any outfit.",
     details: ["Calfskin leather", "Gold chain strap", "Magnetic closure", "Made in Italy"],
     sizes: ["One Size"],
+    sizeFitInfo: "This crossbody measures 20cm x 15cm x 5cm. The chain strap adjusts from 50-60cm for crossbody or shoulder wear.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "printed-silk-scarf",
@@ -180,8 +213,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productScarf,
     description: "A hand-rolled silk twill scarf featuring an original artistic print. Versatile enough to wear as a headscarf, neck tie, or draped from a bag.",
+    extendedDescription: "This silk twill scarf showcases an original artistic print that captures the essence of Atelier Luxe. Hand-rolled edges ensure a luxurious finish, while the 90x90cm size provides versatility in styling. Wear it as a headscarf for a bohemian touch, tied around the neck for elegance, or draped from your bag for a subtle accent. The 100% silk composition drapes beautifully and feels exquisite against the skin.",
     details: ["100% Silk twill", "Hand-rolled edges", "90 x 90 cm", "Made in France"],
     sizes: ["One Size"],
+    sizeFitInfo: "This scarf measures 90cm x 90cm, perfect for various styling options including headscarves, neck ties, and bag accents.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "gold-chain-belt",
@@ -190,8 +227,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productBelt,
     description: "A statement chain belt in polished gold-tone metal. The chunky curb-link design adds a bold accent to any waistline.",
+    extendedDescription: "This gold-tone chain belt makes a bold statement with its chunky curb-link design. The adjustable length ensures a perfect fit, while the hook closure provides security. Crafted from high-quality metal with a polished finish, this belt adds edge to both casual and formal looks. The substantial weight and presence make it a true statement piece that elevates any outfit.",
     details: ["Gold-tone metal", "Adjustable length", "Hook closure", "Made in Italy"],
     sizes: ["One Size"],
+    sizeFitInfo: "This belt adjusts from 70-85cm in length. The chunky curb-link design has a 4cm width.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "tortoiseshell-sunglasses",
@@ -200,8 +241,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productSunglasses,
     description: "Oversized round sunglasses in rich tortoiseshell acetate with gradient brown lenses. A timeless silhouette that flatters every face shape.",
+    extendedDescription: "These oversized round sunglasses feature a rich tortoiseshell acetate frame that adds sophistication to any look. The gradient brown lenses provide UV400 protection while maintaining style. The timeless round silhouette flatters every face shape, making these sunglasses a versatile accessory. The lightweight yet durable construction ensures comfort for all-day wear.",
     details: ["Acetate frame", "UV400 protection", "Gradient lenses", "Made in Italy"],
     sizes: ["One Size"],
+    sizeFitInfo: "These sunglasses have a 52mm lens width and 20mm bridge width. The arms are 145mm long.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "leather-gloves",
@@ -210,8 +255,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productGloves,
     description: "Exquisitely soft gloves in supple lambskin leather with a cashmere lining. The sleek, unadorned design is the epitome of quiet luxury.",
+    extendedDescription: "These leather gloves represent the epitome of quiet luxury with their supple lambskin construction and cashmere lining. The sleek, unadorned design allows them to complement any outfit while providing exceptional comfort and warmth. The slip-on style ensures ease of wear, and the Italian craftsmanship guarantees durability. Perfect for transitional weather when you want to maintain elegance.",
     details: ["Lambskin leather", "Cashmere lining", "Slip-on style", "Made in Italy"],
     sizes: ["S", "M", "L"],
+    sizeFitInfo: "Please measure your dominant hand from the tip of your middle finger to the base of your palm. S: 17-18cm, M: 18-19cm, L: 19-20cm.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "pearl-gold-necklace",
@@ -220,8 +269,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productNecklace,
     description: "A delicate necklace combining freshwater pearls with a fine gold chain. The understated design can be worn alone or layered for a richer look.",
+    extendedDescription: "This delicate necklace combines the timeless elegance of freshwater pearls with a fine 18K gold-plated chain. The understated design allows for versatile styling - wear it alone for minimalist sophistication or layer it with other pieces for a richer look. The adjustable chain ensures a perfect fit, and the French craftsmanship adds to its luxurious appeal.",
     details: ["18K gold-plated", "Freshwater pearls", "Adjustable chain", "Made in France"],
     sizes: ["One Size"],
+    sizeFitInfo: "This necklace has an adjustable chain length of 40-45cm. The pearls are approximately 6-7mm in diameter.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "woven-leather-clutch",
@@ -230,8 +283,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productClutch,
     description: "A compact clutch in hand-woven calfskin leather with a detachable wrist strap. The intricate weave adds texture and artisanal character.",
+    extendedDescription: "This compact clutch showcases exceptional Italian craftsmanship with its hand-woven calfskin leather. The intricate weave adds unique texture and artisanal character to the piece. The zip closure ensures security while the detachable wrist strap provides versatility in carrying options. Perfect for evenings out or special occasions, this clutch combines functionality with artistic design.",
     details: ["Hand-woven calfskin", "Zip closure", "Wrist strap", "Made in Italy"],
     sizes: ["One Size"],
+    sizeFitInfo: "This clutch measures 25cm x 15cm x 5cm. The detachable wrist strap is 20cm long.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "cashmere-beanie",
@@ -240,8 +297,12 @@ export const products: Product[] = [
     category: "Accessories",
     image: productBeanie,
     description: "A cozy ribbed beanie in pure cashmere. The turn-up brim and relaxed crown offer warmth with refined simplicity.",
+    extendedDescription: "This ribbed beanie combines ultimate comfort with refined simplicity. Crafted from pure cashmere, it provides exceptional warmth without bulk. The turn-up brim adds a touch of style, while the relaxed crown ensures a comfortable fit. Scottish craftsmanship guarantees the highest quality, making this an essential accessory for cooler months.",
     details: ["100% Cashmere", "Ribbed construction", "Turn-up brim", "Made in Scotland"],
     sizes: ["One Size"],
+    sizeFitInfo: "This beanie has a relaxed fit that accommodates most head sizes. The ribbed construction provides stretch and comfort.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
 
   // ── Dresses (9) ──
@@ -252,8 +313,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productDress,
     description: "An exquisite evening dress in flowing silk with delicate spaghetti straps and a cinched waist. The floor-length silhouette creates an effortlessly dramatic presence.",
+    extendedDescription: "This exquisite evening dress is crafted from the finest flowing silk, creating a floor-length silhouette that commands attention. The delicate spaghetti straps and cinched waist accentuate the feminine form, while the fully lined construction ensures comfort throughout the evening. The concealed zip closure maintains clean lines, and the French craftsmanship guarantees exceptional quality. Perfect for formal events and special occasions.",
     details: ["100% Silk", "Fully lined", "Concealed zip closure", "Made in France"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This dress has a fitted bodice with a cinched waist and flowing skirt. The spaghetti straps provide delicate support. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "ivory-wrap-dress",
@@ -262,8 +327,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productWrapDress,
     description: "A flowing midi wrap dress in ivory silk crêpe with billowing sleeves and a self-tie waist. The fluid drape moves gracefully with every step.",
+    extendedDescription: "This ivory silk wrap dress offers effortless elegance with its flowing midi length and billowing sleeves. The silk crêpe fabric drapes beautifully, creating fluid movement with every step. The self-tie waist allows for a customizable fit, while the wrap construction flatters every figure. Perfect for both daytime and evening wear, this dress combines comfort with sophisticated style.",
     details: ["100% Silk crêpe", "Self-tie closure", "Midi length", "Made in France"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This wrap dress has a fluid fit that flatters all body types. The self-tie waist allows for adjustability. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "black-cocktail-dress",
@@ -272,8 +341,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productCocktailDress,
     description: "A striking cocktail dress in black chiffon with a plunging V-neckline and a crystal-embellished bodice. The A-line skirt creates timeless drama.",
+    extendedDescription: "This striking cocktail dress combines elegance with drama in black chiffon. The plunging V-neckline and crystal-embellished bodice add sophistication, while the A-line skirt creates timeless movement. The fully lined construction ensures comfort, and the French craftsmanship guarantees exceptional quality. Perfect for cocktail parties and formal events where you want to make a lasting impression.",
     details: ["Silk chiffon", "Crystal embellishment", "Fully lined", "Made in France"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This dress has a fitted bodice with an A-line skirt. The plunging neckline requires appropriate undergarments. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "olive-slip-dress",
@@ -282,8 +355,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productSlipDress,
     description: "A bias-cut slip dress in deep olive silk satin that skims the body with effortless sensuality. The cowl neckline and floor-length hem evoke old Hollywood glamour.",
+    extendedDescription: "This bias-cut slip dress in deep olive silk satin evokes old Hollywood glamour with its sensual drape and floor-length hem. The cowl neckline adds intrigue, while the adjustable straps ensure a perfect fit. The silk satin fabric skims the body beautifully, creating an effortlessly sensual silhouette. Perfect for formal occasions or when you want to channel vintage elegance.",
     details: ["100% Silk satin", "Bias cut", "Adjustable straps", "Made in France"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This slip dress has a body-skimming fit that follows your natural curves. The bias cut provides stretch and comfort. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "white-shirt-dress",
@@ -292,8 +369,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productShirtDress,
     description: "A crisp white shirt dress with utilitarian chest pockets and a cinched gold-buckle belt. The relaxed yet tailored fit bridges casual and polished.",
+    extendedDescription: "This crisp white shirt dress perfectly bridges casual and polished styling. The utilitarian chest pockets add functionality, while the cinched gold-buckle belt defines the waist. The cotton poplin fabric offers comfort and durability, and the relaxed yet tailored fit flatters every body type. Ideal for transitioning from office to evening with minimal changes.",
     details: ["Cotton poplin", "Gold-tone buckle belt", "Chest pockets", "Made in Italy"],
     sizes: ["XS", "S", "M", "L", "XL"],
+    sizeFitInfo: "This shirt dress has a relaxed fit with a cinched belt for waist definition. The length hits at mid-calf. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "burgundy-velvet-dress",
@@ -302,8 +383,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productVelvetDress,
     description: "A rich burgundy velvet midi dress with a plunging V-neckline and flowing skirt. The luxurious fabric catches light with every movement.",
+    extendedDescription: "This burgundy velvet midi dress exudes luxury with its rich color and flowing silhouette. The plunging V-neckline adds intrigue, while the silk velvet fabric catches light beautifully with every movement. The fully lined construction ensures comfort, and the midi length provides versatility. Perfect for formal occasions where you want to make a sophisticated statement.",
     details: ["Silk velvet", "Fully lined", "Midi length", "Made in France"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This dress has a fitted bodice with a flowing skirt. The plunging neckline requires appropriate undergarments. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "gold-pleated-gown",
@@ -312,8 +397,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productPleatedDress,
     description: "A show-stopping floor-length gown in gold lamé with allover knife pleats. The halter neckline and cinched waist create a goddess-like silhouette.",
+    extendedDescription: "This show-stopping floor-length gown in gold lamé is designed for those who want to command attention. The allover knife pleats create texture and movement, while the halter neckline and cinched waist sculpt a goddess-like silhouette. The metallic silk blend catches light beautifully, making this the perfect choice for red carpet events and formal galas.",
     details: ["Metallic silk blend", "Knife pleats", "Halter neckline", "Made in France"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This gown has a fitted bodice with a cinched waist and flowing pleated skirt. The halter neckline provides support. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "black-lace-gown",
@@ -322,8 +411,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productLaceGown,
     description: "An exquisite black lace gown with intricate floral motifs, bell sleeves, and a dramatic floor-length silhouette. The sheer panelling adds allure with restraint.",
+    extendedDescription: "This exquisite black lace gown features intricate floral motifs in French Chantilly lace, creating a masterpiece of craftsmanship. The bell sleeves and dramatic floor-length silhouette add romance, while the sheer panelling provides allure with restraint. The silk lining ensures comfort, and the French heritage guarantees exceptional quality. Perfect for black-tie events and formal occasions.",
     details: ["French Chantilly lace", "Silk lining", "Bell sleeves", "Made in France"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This gown has a fitted silhouette with bell sleeves. The lace construction provides some stretch. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
   {
     id: "draped-midi-dress",
@@ -332,8 +425,12 @@ export const products: Product[] = [
     category: "Dresses",
     image: productSlipDress,
     description: "A sculptural dress with an asymmetric hemline and expertly draped bodice. The one-shoulder design creates a striking architectural silhouette.",
+    extendedDescription: "This sculptural dress features an asymmetric hemline and expertly draped bodice that creates architectural interest. The one-shoulder design adds drama, while the stretch crêpe fabric ensures comfort and movement. The concealed zip closure maintains clean lines, and the Italian craftsmanship guarantees exceptional quality. Perfect for those who want to make a bold fashion statement.",
     details: ["Stretch crêpe", "Asymmetric hem", "Concealed zip", "Made in Italy"],
     sizes: ["XS", "S", "M", "L"],
+    sizeFitInfo: "This dress has a draped, sculptural fit with an asymmetric hem. The stretch crêpe provides comfort and movement. Take your regular size.",
+    inStoreAvailability: true,
+    deliveryReturns: "Complimentary delivery within 2-3 business days. Express delivery available for €50. Returns accepted within 30 days of purchase with free return shipping.",
   },
 
   // ── Shoes (9) ──

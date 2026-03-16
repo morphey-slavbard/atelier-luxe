@@ -20,6 +20,7 @@ const Footer = () => {
               <Link to="/collection" className="font-display text-sm font-light opacity-70 hover:opacity-100 transition-opacity">Ready-to-Wear</Link>
               <Link to="/collection" className="font-display text-sm font-light opacity-70 hover:opacity-100 transition-opacity">Accessories</Link>
               <Link to="/collection" className="font-display text-sm font-light opacity-70 hover:opacity-100 transition-opacity">Shoes</Link>
+              <Link to="/wishlist" className="font-display text-sm font-light opacity-70 hover:opacity-100 transition-opacity">Wishlist</Link>
             </div>
           </div>
 

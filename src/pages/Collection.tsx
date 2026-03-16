@@ -1,13 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { products, categories } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 
 const Collection = () => {
+  const [searchParams] = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("All");
+  const searchQuery = searchParams.get("search") || "";
 
-  const filtered = activeCategory === "All"
-    ? products
-    : products.filter((p) => p.category === activeCategory);
+  useEffect(() => {
+    setActiveCategory("All");
+  }, [searchQuery]);
+
+  const filtered = products.filter((product) => {
+    const categoryMatch = activeCategory === "All" || product.category === activeCategory;
+    const searchMatch = !searchQuery || 
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return categoryMatch && searchMatch;
+  });
 
   return (
     <main className="pt-20 md:pt-24">
@@ -15,8 +27,13 @@ const Collection = () => {
       <section className="editorial-container py-12 md:py-16 text-center">
         <p className="editorial-subheading mb-3">Spring Summer 2026</p>
         <h1 className="font-display text-3xl md:text-5xl font-light tracking-[0.15em] uppercase text-foreground">
-          The Collection
+          {searchQuery ? `Search Results for "${searchQuery}"` : "The Collection"}
         </h1>
+        {searchQuery && (
+          <p className="text-muted-foreground mt-4">
+            {filtered.length} items found
+          </p>
+        )}
       </section>
 
       {/* Filter */}
@@ -40,11 +57,22 @@ const Collection = () => {
 
       {/* Product Grid */}
       <section className="editorial-container pb-24">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {filtered.length > 0 ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <p className="font-display text-lg font-light text-foreground mb-4">
+              No products found
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Try adjusting your filters or search query
+            </p>
+          </div>
+        )}
       </section>
     </main>
   );
