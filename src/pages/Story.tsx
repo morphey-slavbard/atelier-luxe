@@ -3,10 +3,6 @@ import editorialWide from "../assets/editorial-wide.jpg";
 import editorialLookbook from "../assets/editorial-lookbook.jpg";
 import editorialRTW from "../assets/editorial-rtw.jpg";
 import editorialShoes from "../assets/editorial-shoes.jpg";
-<<<<<<< HEAD
-=======
-
->>>>>>> 0152110 (updated the story page to include the new story and added a link to the story page from the home page)
 const Story = () => {
   return (
     <main className="pt-20 md:pt-24">
