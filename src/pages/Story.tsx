@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
-
+import editorialWide from "@/assets/editorial-wide.jpg";
+import editorialLookbook from "@/assets/editorial-lookbook.jpg";
+import editorialRTW from "@/assets/editorial-rtw.jpg";
+import editorialShoes from "@/assets/editorial-shoes.jpg";
 const Story = () => {
   return (
     <main className="pt-20 md:pt-24">
       {/* Hero Section */}
       <section className="w-full h-[60vh] md:h-[70vh] overflow-hidden relative">
         <img
-          src="src/assets/editorial-wide.jpg"
+          src={editorialWide}
           alt="Atelier Luxe Heritage"
           className="w-full h-full object-cover"
         />
@@ -47,7 +50,7 @@ const Story = () => {
         </div>
         <div className="overflow-hidden aspect-[4/5]">
           <img
-            src="src/assets/editorial-lookbook.jpg"
+            src={editorialLookbook}
             alt="Atelier Luxe Founder"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -58,7 +61,7 @@ const Story = () => {
       <section className="editorial-container py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="overflow-hidden aspect-[4/5] order-2 md:order-1">
           <img
-            src="src/assets/editorial-rtw.jpg"
+            src={editorialRTW}
             alt="Atelier Luxe Heritage"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -93,7 +96,7 @@ const Story = () => {
         </div>
         <div className="overflow-hidden aspect-[4/5]">
           <img
-            src="src/assets/editorial-shoes.jpg"
+            src={editorialShoes}
             alt="Atelier Luxe Boutique"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
