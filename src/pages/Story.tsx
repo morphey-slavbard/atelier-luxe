@@ -3,20 +3,18 @@ import editorialWide from "../assets/editorial-wide.jpg";
 import editorialLookbook from "../assets/editorial-lookbook.jpg";
 import editorialRTW from "../assets/editorial-rtw.jpg";
 import editorialShoes from "../assets/editorial-shoes.jpg";
-import editorialWide from "../assets/editorial-wide.jpg";
-import editorialLookbook from "../assets/editorial-lookbook.jpg";
-import editorialRTW from "../assets/editorial-rtw.jpg";
-import editorialShoes from "../assets/editorial-shoes.jpg";
+
 const Story = () => {
   return (
     <main className="pt-20 md:pt-24">
       {/* Hero Section */}
       <section className="w-full h-[60vh] md:h-[70vh] overflow-hidden relative">
-        <img
-          src={editorialWide}
-          alt="Atelier Luxe Heritage"
-          className="w-full h-full object-cover"
-        />
+                <img
+                  src={editorialWide}
+                  alt="Atelier Luxe Heritage"
+                  className="w-full h-full object-cover"
+                />
+        {/* Hero image removed as requested */}
         <div className="absolute inset-0 bg-black/40 flex items-end">
           <div className="editorial-container pb-12 md:pb-16">
             <h1 className="font-display text-4xl md:text-5xl font-light tracking-wide text-white mb-4">
@@ -38,26 +36,29 @@ const Story = () => {
         </div>
       </div>
 
+
       {/* Story Section 1 */}
       <section className="editorial-container py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-        <div>
-          <p className="editorial-subheading mb-4 text-sm">ORIGINS</p>
-          <h2 className="font-display text-3xl md:text-4xl font-light tracking-wide text-foreground mb-6">
-            Founded on a Vision
-          </h2>
-          <p className="editorial-body text-base leading-relaxed mb-6">
-            In 1972, Atelier Luxe was founded by the visionary designer Margot Beaumont, who believed that true luxury lies in the art of understatement. What began as a small atelier in the heart of Paris has blossomed into an internationally recognized symbol of refined elegance.
-          </p>
-          <p className="editorial-body text-base leading-relaxed text-muted-foreground">
-            Margot's philosophy was simple yet profound: every piece should tell a story of craftsmanship, materials sourced from the finest suppliers, and an unwavering commitment to timeless design. She refused to follow trends, instead creating pieces that would remain relevant for generations.
-          </p>
-        </div>
-        <div className="overflow-hidden aspect-[4/5]">
-          <img
-            src={editorialLookbook}
-            alt="Atelier Luxe Founder"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-          />
+        <div className="md:col-span-2 flex flex-col md:flex-row gap-12 md:gap-16 items-center">
+          <div className="md:w-2/5 w-full">
+            <p className="editorial-subheading mb-4 text-sm">ORIGINS</p>
+            <h2 className="font-display text-3xl md:text-4xl font-light tracking-wide text-foreground mb-6">
+              Founded on a Vision
+            </h2>
+            <p className="editorial-body text-base leading-relaxed mb-6">
+              In 1972, Atelier Luxe was founded by the visionary designer Margot Beaumont, who believed that true luxury lies in the art of understatement. What began as a small atelier in the heart of Paris has blossomed into an internationally recognized symbol of refined elegance.
+            </p>
+            <p className="editorial-body text-base leading-relaxed text-muted-foreground">
+              Margot's philosophy was simple yet profound: every piece should tell a story of craftsmanship, materials sourced from the finest suppliers, and an unwavering commitment to timeless design. She refused to follow trends, instead creating pieces that would remain relevant for generations.
+            </p>
+          </div>
+          <div className="md:w-3/5 w-full overflow-hidden aspect-[4/5]">
+            <img
+              src={editorialLookbook}
+              alt="Atelier Luxe Founder"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         </div>
       </section>
 
@@ -78,6 +79,7 @@ const Story = () => {
           <p className="editorial-body text-base leading-relaxed mb-6">
             Throughout the 1980s and 1990s, Atelier Luxe gained recognition among discerning clientele who appreciated the brand's uncompromising approach to quality. Each season brought meticulously curated collections that showcased Italian craftsmanship, French elegance, and innovative design.
           </p>
+          {/* First shoe image removed as requested */}
           <p className="editorial-body text-base leading-relaxed text-muted-foreground">
             The brand became synonymous with the modern woman who values substance over sensation—pieces that transcend fleeting fashion cycles and become treasured staples in one's wardrobe.
           </p>
