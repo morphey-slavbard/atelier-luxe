@@ -3,6 +3,10 @@ import editorialWide from "../assets/editorial-wide.jpg";
 import editorialLookbook from "../assets/editorial-lookbook.jpg";
 import editorialRTW from "../assets/editorial-rtw.jpg";
 import editorialShoes from "../assets/editorial-shoes.jpg";
+import editorialWide from "../assets/editorial-wide.jpg";
+import editorialLookbook from "../assets/editorial-lookbook.jpg";
+import editorialRTW from "../assets/editorial-rtw.jpg";
+import editorialShoes from "../assets/editorial-shoes.jpg";
 const Story = () => {
   return (
     <main className="pt-20 md:pt-24">
